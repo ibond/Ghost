@@ -27,4 +27,6 @@ module.exports = function (server) {
     server.get('/ghost/api/v0.1/db/', api.requestHandler(api.db.exportContent));
     server.post('/ghost/api/v0.1/db/', middleware.busboy, api.requestHandler(api.db.importContent));
     server.del('/ghost/api/v0.1/db/', api.requestHandler(api.db.deleteAllContent));
+	// #### Static Site Generation
+    server.put('/ghost/api/v0.1/staticsite/generate', api.requestHandler(api.staticsite.generate));
 };

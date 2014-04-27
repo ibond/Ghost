@@ -10,6 +10,7 @@ var _             = require('lodash'),
     posts         = require('./posts'),
     users         = require('./users'),
     tags          = require('./tags'),
+    staticsite    = require('./staticsite'),
     requestHandler,
     init;
 
@@ -79,6 +80,7 @@ module.exports = {
     notifications: notifications,
     settings: settings,
     db: db,
+    staticsite: staticsite,
     requestHandler: requestHandler,
     init: init
 };
